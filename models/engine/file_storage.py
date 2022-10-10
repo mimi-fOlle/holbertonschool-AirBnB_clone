@@ -17,3 +17,12 @@ class FileStorage:
     def all(self):
         "Returns all objects"
         return FileStorage.__objects
+
+    def new(self, obj):
+        """
+        Adds an object to the class dictionary of objects
+
+        args:
+            obj: The object to add
+        """
+        FileStorage.__objects.update({f"{obj.id}": obj})
