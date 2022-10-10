@@ -14,11 +14,18 @@ class BaseModel:
         updated_at: datetime object of update of instance
     """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         current_datetime = datetime.now()
-        self.id = str(uuid4())
-        self.created_at = current_datetime
-        self.updated_at = current_datetime
+        if len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == 'created_at' or key == 'updated_at':
+                    value = current_datetime
+                if "__class__" != key:
+                    setattr(self, key, value)
+        else:
+            self.id = str(uuid4())
+            self.created_at = current_datetime
+            self.updated_at = current_datetime
 
     def __str__(self):
         "Prints the str representation of BaseModel"
