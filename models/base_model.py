@@ -34,7 +34,7 @@ class BaseModel:
         instance
         """
         result_dict = self.__dict__
-        result_dict.update({"class": BaseModel.__name__})
+        result_dict.update({"__class__": BaseModel.__name__})
         result_dict.update({"created_at": self.created_at.isoformat()})
         result_dict.update({"updated_at": self.updated_at.isoformat()})
 
