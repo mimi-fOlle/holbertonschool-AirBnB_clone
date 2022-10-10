@@ -13,3 +13,7 @@ class FileStorage:
     """
     __file_path = ""
     __objects = {}
+
+    def all(self):
+        "Returns all objects"
+        return FileStorage.__objects
