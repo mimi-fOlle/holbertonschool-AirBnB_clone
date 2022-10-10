@@ -35,3 +35,9 @@ class TestBaseModel(unittest.TestCase):
         "Dictionary contains __class__, which is the class name"
         self.assertTrue("__class__" in returned_dict)
         self.assertEqual(returned_dict["__class__"], type(base).__name__)
+
+    def test_str(self):
+        "Tests that the string representation has the right format"
+        base = BaseModel()
+        right_format = f"[{type(base).__name__}] ({base.id}) {base.__dict__}"
+        self.assertEqual(str(base), right_format)
