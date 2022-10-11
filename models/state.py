@@ -2,9 +2,9 @@
 """ Module: state """
 
 
-import models
+from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """ Public class attributes """
+    """ Public class attributes for State"""
     self.name = "" 

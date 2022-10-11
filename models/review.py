@@ -2,11 +2,11 @@
 """ Module: review """
 
 
-import models
+from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """ Public class attributes """
+    """ Public class attributes Review """
     place_id = ""
     user_id = ""
     text = ""

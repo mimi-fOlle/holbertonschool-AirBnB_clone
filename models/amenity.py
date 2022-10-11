@@ -2,9 +2,9 @@
 """ Module: amenity """
 
 
-import models
+from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """ Public class attributes """
+    """ Public class attributes for Amenity"""
     name = ""

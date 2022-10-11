@@ -2,10 +2,10 @@
 """ Module: city """
 
 
-import models
+from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """ Public class attributes """
+    """ Public class attributes for City"""
     state_id = ""
     name = "" 
