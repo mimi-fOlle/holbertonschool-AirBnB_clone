@@ -19,8 +19,8 @@ class BaseModel:
         current_datetime = datetime.now()
         if len(kwargs) != 0:
             for key, value in kwargs.items():
-                if key == 'created_at' or key == 'updated_at':
-                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                # if key == 'created_at' or key == 'updated_at':
+                #     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if "__class__" != key:
                     setattr(self, key, value)
         else:
