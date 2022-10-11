@@ -20,7 +20,7 @@ class BaseModel:
         if len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
-                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    value = datetime.fromisoformat(value)
                 if "__class__" != key:
                     setattr(self, key, value)
         else:
@@ -43,11 +43,8 @@ class BaseModel:
         Returns a dictionary containing all keys/values of __dict__ of the
         instance
         """
-        result_dict = self.__dict__
-        result_dict.update({"__class__": BaseModel.__name__})
-        if isinstance(self.created_at, datetime):
-            result_dict.update({"created_at": self.created_at.isoformat()})
-        if isinstance(self.updated_at, datetime):
-            result_dict.update({"updated_at": self.updated_at.isoformat()})
-
-        return result_dict
+        result = {**self.__dict__}
+        result['__class__'] = self.__class__.__name__
+        result['created_at'] = datetime.isoformat(result['created_at'])
+        result['updated_at'] = datetime.isoformat(result['updated_at'])
+        return result
