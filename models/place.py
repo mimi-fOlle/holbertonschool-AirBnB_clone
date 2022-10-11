@@ -2,11 +2,11 @@
 """ Module: place """
 
 
-import models
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """ Public class attributes """
+    """ Public class attributes for Place"""
     city_id = ""
     user_id = ""
     name = ""
