@@ -13,7 +13,7 @@ class FileStorage:
             __file_path: string - path to the JSON file
             __objects: dictionary - stores all objects by <class name>.id
     """
-    __file_path = ""
+    __file_path = "storage.json"
     __objects = {}
 
     def all(self):
@@ -27,12 +27,16 @@ class FileStorage:
         args:
             obj: The object to add
         """
-        FileStorage.__objects.update({f"{obj.id}": obj})
+        key = f"{obj.__class__.__name__}.{obj.id}"
+        FileStorage.__objects[key] = obj
 
     def save(self):
         "Serializes all objects to the JSON file file_path"
+        serializable_objects = {}
+        for key, obj in FileStorage.__objects.items():
+            serializable_objects[key] = obj.to_dict()
         with open(FileStorage.__file_path, 'w', encoding='utf-8') as f:
-            json.dump(FileStorage.__objects, f)
+            json.dump(serializable_objects, f)
 
     def reload(self):
         "Deserializes the JSON file to __objects if it exists"
