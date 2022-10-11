@@ -2,7 +2,7 @@
 "BaseModel class, defines all common attributes/methods"
 from uuid import uuid4
 from datetime import datetime
-
+import models
 
 class BaseModel:
     """
@@ -19,13 +19,14 @@ class BaseModel:
         if len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
-                    value = current_datetime
+                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 if "__class__" != key:
                     setattr(self, key, value)
         else:
             self.id = str(uuid4())
             self.created_at = current_datetime
             self.updated_at = current_datetime
+            models.storage.new(self)
 
     def __str__(self):
         "Prints the str representation of BaseModel"
@@ -34,6 +35,7 @@ class BaseModel:
     def save(self):
         "Updates the updated_at instance attribute with current datetime"
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """
