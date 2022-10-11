@@ -45,7 +45,9 @@ class BaseModel:
         """
         result_dict = self.__dict__
         result_dict.update({"__class__": BaseModel.__name__})
-        result_dict.update({"created_at": self.created_at.isoformat()})
-        result_dict.update({"updated_at": self.updated_at.isoformat()})
+        if isinstance(self.created_at, datetime):
+            result_dict.update({"created_at": self.created_at.isoformat()})
+        if isinstance(self.updated_at, datetime):
+            result_dict.update({"updated_at": self.updated_at.isoformat()})
 
         return result_dict

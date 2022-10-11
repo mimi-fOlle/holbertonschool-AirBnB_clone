@@ -44,7 +44,6 @@ class FileStorage:
         file_exists = exists(FileStorage.__file_path)
 
         if file_exists:
-            to_objects = {}
             with open(FileStorage.__file_path, 'r', encoding='utf-8') as f:
                 json_dict = json.load(f)
                 for key in json_dict:
