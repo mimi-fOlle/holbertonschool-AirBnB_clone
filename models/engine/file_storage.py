@@ -2,6 +2,7 @@
 "Serializes and deserializes JSON instances to/from files"
 import json
 from os.path import exists
+from models.base_model import BaseModel
 
 
 class FileStorage:
@@ -43,5 +44,8 @@ class FileStorage:
         file_exists = exists(FileStorage.__file_path)
 
         if file_exists:
+            to_objects = {}
             with open(FileStorage.__file_path, 'r', encoding='utf-8') as f:
-                FileStorage.__objects = json.load(f)
+                json_dict = json.load(f)
+                for key in json_dict:
+                    FileStorage.__objects[key] = BaseModel(**json_dict[key])
