@@ -1,8 +1,8 @@
 # AirBnB clone - The console
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T160107Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f5f8cfdb3c41591c6e3a7db3b4f235444e37403706b075504c2e7a0479a9ec99)
+![Holberton School banner](./banner.png)
 ## Description
 The object of this project is to deploy on the server a simple copy of AirBnB website. The console, is the first step towards building a full web application: the AirBnB clone. Besides, we will use it for all other following projects, i.e. HTML/CSS templating, database storage, API, front-end integration, etc.
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T160107Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c312a8e6848eef0e0a88268f12a300b286b1325e7eff9689e93c9db4990063f9)
+![Diagram of relationship between front-back end of our app: console/storage engines (json/mySQL)/RestAPI to web Frameworks (Flask) and HTML/CSS/JS front](./frontback.png)
 ### Command interpreter 
 The console is a command interpreter to manage the objects of  project AirBnB, such as:
 -   Create a new object 
