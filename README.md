@@ -1,11 +1,10 @@
 # AirBnB clone - The console
 
-
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T060947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f8825506a93cce43be3af37b5c76aa4ff29b3ac60e7bd890bed378e62191643f)
+![hbnb](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T060947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f8825506a93cce43be3af37b5c76aa4ff29b3ac60e7bd890bed378e62191643f)
 
 ## Description
 The object of this project is to deploy on the server a simple copy of AirBnB website. The console, is the first step towards building a full web application: the AirBnB clone. Besides, we will use it for all other following projects, i.e. HTML/CSS templating, database storage, API, front-end integration, etc.
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T060947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=988ce7a09af82af4855953876a5a97bc28b00454bcb876399db6be274a19ab02)
+![flow](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T060947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=988ce7a09af82af4855953876a5a97bc28b00454bcb876399db6be274a19ab02)
 
 ### Command interpreter 
 The console is a command interpreter to manage the objects of  project AirBnB, such as:
