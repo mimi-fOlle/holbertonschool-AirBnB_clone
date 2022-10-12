@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Program console.py that contains the entry point of the cmd interpreter"""
 import cmd
+import models
 from models.base_model import BaseModel
 
 
@@ -33,6 +34,26 @@ class HBNBCommand(cmd.Cmd):
             inst = BaseModel()
             inst.save()
             print(inst.id)
+
+    def do_show(self, arg):
+        ("Prints the str representation of an instance based on class name "
+         "and id")
+        args = arg.split()
+        if len(args) < 1:
+            print("** class name missing **")
+        elif len(args) < 2:
+            print("** instance id missing **")
+        elif args[0] != "BaseModel":
+            print("** class doesn't exist **")
+        else:
+            id = args[1]
+            insts = models.storage.all()
+            key = f"BaseModel.{id}"
+
+            if key in insts:
+                print(insts[key])
+            else:
+                print("** no instance found **")
 
 
 if __name__ == '__main__':
