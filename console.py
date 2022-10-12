@@ -27,7 +27,7 @@ class HBNBCommand(cmd.Cmd):
 
     def precmd(self, line):
         "Handles command errors"
-        if len(line) > 0:
+        if len(line.strip()) > 0:
             args = line.split()
             command = args[0]
             if command == "create":
