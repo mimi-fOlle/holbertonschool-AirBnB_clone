@@ -4,7 +4,6 @@ import json
 from os.path import exists
 from models.base_model import BaseModel
 
-
 class FileStorage:
     """
     Serializes and deserializes JSON instances to/from files
@@ -48,4 +47,6 @@ class FileStorage:
                 json_dict = json.load(f)
                 FileStorage.__objects = {}
                 for key, data in json_dict.items():
-                    FileStorage.__objects[key] = BaseModel(**data)
+                    class_name = date["__class__"]
+                    class_name = models.classes[class_name]
+                    FileStorage.__objects[key] = class_name(**data)
