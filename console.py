@@ -34,7 +34,7 @@ class HBNBCommand(cmd.Cmd):
                 if len(args) < 2:
                     print("** class name missing **")
                     return ""
-                elif args[1] != "BaseModel":
+                elif args[1] not in models.classes:
                     print("** class doesn't exist **")
                     return ""
                 return line
@@ -43,7 +43,7 @@ class HBNBCommand(cmd.Cmd):
                 if len(args) < 2:
                     print("** class name missing **")
                     return ""
-                elif args[1] != "BaseModel":
+                elif args[1] not in models.classes:
                     print("** class doesn't exist **")
                     return ""
                 elif len(args) < 3:
@@ -53,8 +53,10 @@ class HBNBCommand(cmd.Cmd):
         return line
 
     def do_create(self, arg):
-        "Creates a new instance of BaseModel and saves it to the JSON file"
-        inst = BaseModel()
+        "Creates a new class instance and saves it to the JSON file"
+        args = arg.split()
+        classname = args[0]
+        inst = models.classes[classname]()
         inst.save()
         print(inst.id)
 
@@ -62,9 +64,10 @@ class HBNBCommand(cmd.Cmd):
         ("Prints the str representation of an instance based on class name "
          "and id")
         args = arg.split()
+        classname = args[0]
         id = args[1]
         insts = models.storage.all()
-        key = f"BaseModel.{id}"
+        key = f"{classname}.{id}"
 
         if key in insts:
             print(insts[key])
@@ -74,9 +77,10 @@ class HBNBCommand(cmd.Cmd):
     def do_destroy(self, arg):
         "Deletes an instance based on class name and id"
         args = arg.split()
+        classname = args[0]
         id = args[1]
         insts = models.storage.all()
-        key = f"BaseModel.{id}"
+        key = f"{classname}.{id}"
 
         if key in insts:
             insts.pop(key)
@@ -89,8 +93,9 @@ class HBNBCommand(cmd.Cmd):
          "by adding or updating attribute")
         args = arg.split()
         insts = models.storage.all()
+        classname = args[0]
         id = args[1]
-        key = f"BaseModel.{id}"
+        key = f"{classname}.{id}"
 
         if key not in insts:
             print("** no instance found **")
