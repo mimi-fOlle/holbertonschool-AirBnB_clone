@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Program console.py that contains the entry point of the cmd interpreter"""
 import cmd
+from models.base_model import BaseModel
 
 
 class HBNBCommand(cmd.Cmd):
@@ -21,6 +22,17 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         pass
+
+    def do_create(self, arg):
+        "Creates a new instance of BaseModel and saves it to the JSON file"
+        if not arg:
+            print("** class name missing **")
+        elif arg != "BaseModel":
+            print("** class doesn't exist **")
+        else:
+            inst = BaseModel()
+            inst.save()
+            print(inst.id)
 
 
 if __name__ == '__main__':
