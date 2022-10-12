@@ -1,11 +1,8 @@
 # AirBnB clone - The console
-
-![hbnb](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T060947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f8825506a93cce43be3af37b5c76aa4ff29b3ac60e7bd890bed378e62191643f)
-
+![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T160107Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f5f8cfdb3c41591c6e3a7db3b4f235444e37403706b075504c2e7a0479a9ec99)
 ## Description
 The object of this project is to deploy on the server a simple copy of AirBnB website. The console, is the first step towards building a full web application: the AirBnB clone. Besides, we will use it for all other following projects, i.e. HTML/CSS templating, database storage, API, front-end integration, etc.
-![flow](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T060947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=988ce7a09af82af4855953876a5a97bc28b00454bcb876399db6be274a19ab02)
-
+![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221012T160107Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c312a8e6848eef0e0a88268f12a300b286b1325e7eff9689e93c9db4990063f9)
 ### Command interpreter 
 The console is a command interpreter to manage the objects of  project AirBnB, such as:
 -   Create a new object 
@@ -114,7 +111,7 @@ $
 
 ## Tests
 All tests are located in folder **tests/**  and can execute all by running this command:
- `$ python3 -m unittest discover tests`
+`$ python3 -m unittest discover tests`
 
 ## Authors
 **Moustapha Tall** - [Moustapha's github](https://github.com/MoustaphaElPsyCongroo)
