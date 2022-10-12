@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Program console.py that contains the entry point of the cmd interpreter"""
 import cmd
+import ast
 import models
 from models.base_model import BaseModel
 
@@ -38,7 +39,7 @@ class HBNBCommand(cmd.Cmd):
                     return ""
                 return line
 
-            elif command in ("show", "destroy"):
+            elif command in ("show", "destroy", "update"):
                 if len(args) < 2:
                     print("** class name missing **")
                     return ""
@@ -83,8 +84,34 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
+    def do_update(self, arg):
+        ("Updates an instance based on the class name and id "
+         "by adding or updating attribute")
+        args = arg.split()
+        insts = models.storage.all()
+        id = args[1]
+        key = f"BaseModel.{id}"
+
+        if key not in insts:
+            print("** no instance found **")
+        elif len(args) < 3:
+            print("** attribute name missing **")
+        elif len(args) < 4:
+            print("** value missing **")
+        else:
+            attr_name = args[2]
+            attr_value = args[3]
+            attr_type = type(ast.literal_eval(attr_value))
+            to_update = insts[key]
+
+            if attr_type.__name__ != 'str':
+                setattr(to_update, attr_name, attr_type(attr_value))
+            else:
+                setattr(to_update, attr_name, ast.literal_eval(attr_value))
+            models.storage.save()
+
     def do_all(self, arg):
-        ("Prints all string representations of all instances,"
+        ("Prints all string representations of all instances, "
          "based or not on class name")
         args = arg.split()
         insts = models.storage.all()
