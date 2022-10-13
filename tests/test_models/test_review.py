@@ -1,30 +1,14 @@
 #!/usr/bin/python3
-"Unit tests for Review class"
+"Unit tests for State class"
 import unittest
+from models.base_model import BaseModel
 from models.review import Review
-from models.place import Place
-from models.user import User
 
 
-class TestReview(unittest.TestCase):
-    "Unit tests suite for Review class"
+class TestState(unittest.TestCase):
+    """Unit tests for review class"""
 
-    def test_place_id(self):
-        "Test place id"
-        hello = Review()
-        self.assertEqual("", hello.place_id)
-
-    def test_user_id(self):
-        "Test user id"
-        hello = Review()
-        self.assertEqual("", hello.user_id)
-
-    def test_text(self):
-        "Test text"
-        hello = Review()
-        self.assertEqual("", hello.text)
-
-    def test_instance(self):
-        "Test instance"
-        hello = Review()
-        self.assertIsInstance(hello, Review)
+    def test_review_text(self):
+        """ assertequal function"""
+        b = Review()
+        self.assertEqual("", b.text)

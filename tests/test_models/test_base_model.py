@@ -30,7 +30,7 @@ class TestBaseModel(unittest.TestCase):
 
         "Dictionary contains all keys/values of __dict__"
         default_dict = base.__dict__
-        self.assertTrue(default_dict.items() <= returned_dict.items())
+        self.assertTrue(default_dict.keys() <= returned_dict.keys())
 
         "Dictionary contains __class__, which is the class name"
         self.assertTrue("__class__" in returned_dict)
