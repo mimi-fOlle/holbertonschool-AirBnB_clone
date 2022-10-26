@@ -4,8 +4,7 @@ footer {
   width:100%; 
   position:fixed; 
   bottom:0;
-}
-      
-footer > p {
+  justify-content: flex-end; 
+  align-items: stretch;
   text-align:center;
 }
