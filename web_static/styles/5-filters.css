@@ -6,7 +6,6 @@
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
 }
 
 button {
@@ -19,8 +18,32 @@ button {
     border-radius: 4px;
     border-right: 30px;
     margin-right: 20px;
+    margin-left: auto;
 }
 
 button:hover {
     opacity: 90%;
+}
+
+.locations, .amenities {
+    height: 100%;
+    width: 25%;
+}
+
+.locations {
+    border-right: solid 1px #DDDDDD;
+}
+
+.locations, .amenities, h3 {
+    font-weight: 600;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.locations, .amenities, h4 {
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 0;
 }
