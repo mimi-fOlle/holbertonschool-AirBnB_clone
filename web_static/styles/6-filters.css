@@ -46,6 +46,7 @@ button:hover {
     font-size: 14px;
     margin-left: 40px;
     margin-top: 0;
+    line-height: 1.5rem;
 }
 
 .popover {
@@ -83,4 +84,8 @@ ul {
 
 .locations .popover {
     padding-bottom: 20px;
+}
+
+.popover li {
+    line-height: 1.5rem;
 }
