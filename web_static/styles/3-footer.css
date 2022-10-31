@@ -5,8 +5,8 @@ footer {
   border-top: solid 1px #CCCCCC;
   position: fixed; 
   bottom: 0;
-}
-      
-footer > p {
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
 }
