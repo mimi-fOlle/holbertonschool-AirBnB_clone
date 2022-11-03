@@ -1,0 +1,127 @@
+.places h1 {
+    font-size: 30px;
+}
+
+.places article {
+    width: 390px;
+    height: 900px;
+    margin: 20px;
+    padding: 20px;
+    border: solid 1px #ff5a5f;
+    border-radius: 4px;
+}
+
+.box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.name_price h2 {
+    font-size: 30px;
+    margin-left: 80px;
+}
+
+.name_price {
+    display: flex;
+}
+
+.price_by_night {
+    display: flex;
+    justify-content: center;
+    color: #ff5a5f;
+    font-size: 30px;
+    border: #ff5a5f 4px solid;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.information {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.max_guest {
+    background: url(../images/icon_group.png) no-repeat center;
+}
+
+.number_rooms {
+    background: url(../images/icon_bed.png) no-repeat center;
+}
+
+.number_bathrooms {
+    background: url(../images/icon_bath.png) no-repeat center;
+}
+
+.max_guest, .number_rooms, .number_bathrooms,p {
+    align-self: flex-end;
+    padding-top: 30px;
+}
+
+.user {
+    padding-top: 20px;
+    height: 160px;
+}
+
+.description {
+    padding-top: 10px;
+    line-height: 20px;
+}
+
+.places .amenities {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+}
+
+.places .amenities h2, .reviews h2 {
+    font-size: 16px;
+    width: 350px;
+    border-bottom: solid 1px #DDDDDD;
+    margin-top: 40px;
+    padding-bottom: 10px;
+}
+
+.television {
+    background: url(../images/icon_tv.png) no-repeat;
+    background-size: 35px;
+}
+
+.wifi {
+    background: url(../images/icon_wifi.png) no-repeat;
+    background-size: 35px;
+}
+
+.pet {
+    background: url(../images/icon_pets.png) no-repeat;
+    background-size: 35px;
+}
+
+.places .amenities ul, .reviews ul {
+    margin: 0;
+    padding: 0;
+}
+
+.television li, .wifi li, .pet li {
+    margin: 15px;
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.reviews h3 {
+    font-size: 14px;
+}
+
+.reviews p {
+    padding: 0;
+    font-size: 12px;
+}
